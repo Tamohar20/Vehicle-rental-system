@@ -169,7 +169,7 @@ SELECT * FROM vw_RentalDetails;
 ```
 vehicle-rental-system/
 ├── vehicle_rental_system.sql   # Full database schema, data, and logic
-├── VehicleRentalSystem_Report 2  # Project report (VIT DA2)
+├── VehicleRentalSystem_Report 2.pdf  # Project report (VIT DA2)
 └── README.md
 ```
 
