@@ -169,7 +169,7 @@ SELECT * FROM vw_RentalDetails;
 ```
 vehicle-rental-system/
 ├── vehicle_rental_system.sql   # Full database schema, data, and logic
-├── VehicleRentalSystem_Report.docx  # Project report (VIT DA2)
+├── VehicleRentalSystem_Report 2.pdf  # Project report (VIT DA2)
 └── README.md
 ```
 
@@ -181,8 +181,8 @@ vehicle-rental-system/
 |------|-------------|------|
 | Swapnil Jaiswal | 24BPS1002 | Database Designer |
 | Tamohar Das | 24BPS1016 | SQL Developer |
-| Harsh Gupta | 24BPS1021 | Documentation Lead |
-| Pranav Bhatia | 24BPS1001 | Presentation & Demo Lead |
+| Pranav Bhatia | 24BPS1001 | Documentation Lead |
+| Harsh Gupta | 24BPS1021 | Presentation & Demo Lead |
 
 **Institute:** Vellore Institute of Technology (VIT)  
 **Program:** B.Tech — Computer Science and Engineering  
