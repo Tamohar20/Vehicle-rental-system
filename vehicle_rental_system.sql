@@ -80,7 +80,6 @@ CREATE TABLE Insurance (
     FOREIGN KEY (VehicleID) REFERENCES Vehicle(VehicleID) ON DELETE CASCADE
 );
 
--- 2.7  Rental
 CREATE TABLE Rental (
     RentalID       INT PRIMARY KEY AUTO_INCREMENT,
     CustomerID     INT           NOT NULL,
@@ -131,7 +130,6 @@ CREATE TABLE Maintenance (
     FOREIGN KEY (StaffID)   REFERENCES Staff(StaffID) ON DELETE SET NULL
 );
 
--- 2.10  Damage Report
 CREATE TABLE DamageReport (
     DamageID      INT PRIMARY KEY AUTO_INCREMENT,
     RentalID      INT           NOT NULL,
