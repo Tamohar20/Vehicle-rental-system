@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS VehicleRentalDB;
 USE VehicleRentalDB;
 
@@ -157,16 +156,16 @@ INSERT INTO Branch (BranchName, Location, City, Phone, Email) VALUES
 ('VRS Bangalore', '88 Residency Road',              'Bangalore', '08044112233', 'blr@vrs.com');
 
 INSERT INTO Staff (FirstName, LastName, Role, Email, Phone, HireDate, Salary, BranchID) VALUES
-('Arjun',    'Sharma',    'Manager',  'arjun.sharma@vrs.com',    '9876543210', '2020-03-15', 65000.00, 1),
-('Priya',    'Nair',      'Manager',  'priya.nair@vrs.com',      '9876543211', '2019-07-01', 68000.00, 2),
-('Karthik',  'Raj',       'Agent',    'karthik.raj@vrs.com',     '9876543212', '2021-01-10', 38000.00, 1),
-('Deepa',    'Menon',     'Agent',    'deepa.menon@vrs.com',     '9876543213', '2022-06-20', 36000.00, 2),
-('Ramesh',   'Kumar',     'Mechanic', 'ramesh.kumar@vrs.com',    '9876543214', '2020-11-05', 42000.00, 1),
-('Sunita',   'Verma',     'Mechanic', 'sunita.verma@vrs.com',    '9876543215', '2021-03-22', 40000.00, 3),
-('Vijay',    'Krishnan',  'Manager',  'vijay.k@vrs.com',         '9876543216', '2018-09-01', 72000.00, 3),
-('Lakshmi',  'Iyer',      'Agent',    'lakshmi.iyer@vrs.com',    '9876543217', '2023-02-14', 35000.00, 4),
-('Anand',    'Pillai',    'Manager',  'anand.pillai@vrs.com',    '9876543218', '2017-05-10', 75000.00, 4),
-('Meena',    'Rajan',     'Cleaner',  'meena.rajan@vrs.com',     '9876543219', '2022-08-30', 25000.00, 1);
+('Kowsic',     'L',         'Manager',  'kowsic.l@24bps1100.vrs.com',        '9876543210', '2020-03-15', 65000.00, 1),
+('Astha',      'Dikhit',    'Manager',  'astha.dikhit@24bps1134.vrs.com',    '9876543211', '2019-07-01', 68000.00, 2),
+('Caleb',      'George',    'Agent',    'caleb.george@24bps1027.vrs.com',    '9876543212', '2021-01-10', 38000.00, 1),
+('M',          'Akshita',   'Agent',    'm.akshita@24bps1106.vrs.com',       '9876543213', '2022-06-20', 36000.00, 2),
+('Bhagyashree','Naidu',     'Mechanic', 'bhagyashree.n@24bps1036.vrs.com',  '9876543214', '2020-11-05', 42000.00, 1),
+('Tarun',      'U',         'Mechanic', 'tarun.u@24bps1095.vrs.com',         '9876543215', '2021-03-22', 40000.00, 3),
+('Ranadheer',  'Ravanam',   'Manager',  'ranadheer.r@24bps1092.vrs.com',    '9876543216', '2018-09-01', 72000.00, 3),
+('Tathireddy', 'Reddy',     'Agent',    'tathireddy.s@24bai1057.vrs.com',   '9876543217', '2023-02-14', 35000.00, 4),
+('Pranav',     'Bhatia',    'Manager',  'pranav.bhatia@24bps1001.vrs.com',  '9876543218', '2017-05-10', 75000.00, 4),
+('Sanjay',     'P',         'Cleaner',  'sanjay.p@24bps1063.vrs.com',       '9876543219', '2022-08-30', 25000.00, 1);
 
 UPDATE Branch SET ManagerID = 1 WHERE BranchID = 1;
 UPDATE Branch SET ManagerID = 2 WHERE BranchID = 2;
@@ -174,16 +173,34 @@ UPDATE Branch SET ManagerID = 7 WHERE BranchID = 3;
 UPDATE Branch SET ManagerID = 9 WHERE BranchID = 4;
 
 INSERT INTO Customer (FirstName, LastName, Email, Phone, LicenseNo, LicenseExpiry, DOB, Address, City) VALUES
-('Aditya',   'Mehta',    'aditya.mehta@gmail.com',    '9001234567', 'TN01-2018-0012345', '2028-04-10', '1993-07-15', '22 Besant Nagar, 4th Lane',   'Chennai'),
-('Sneha',    'Patel',    'sneha.patel@gmail.com',     '9001234568', 'TN02-2020-0054321', '2030-09-20', '1998-02-28', '7 T Nagar Main Road',          'Chennai'),
-('Rahul',    'Gupta',    'rahul.gupta@gmail.com',     '9001234569', 'KA01-2019-0099876', '2029-05-15', '1990-11-12', '55 Indiranagar, 12th Cross',   'Bangalore'),
-('Ananya',   'Bose',     'ananya.bose@gmail.com',     '9001234570', 'TN03-2021-0011122', '2031-03-30', '1996-08-05', '10 Adyar Bridge Road',         'Chennai'),
-('Kiran',    'Joshi',    'kiran.joshi@gmail.com',     '9001234571', 'MH01-2017-0077665', '2027-11-22', '1985-03-25', '33 Juhu Beach Colony',         'Mumbai'),
-('Divya',    'Nair',     'divya.nair@gmail.com',      '9001234572', 'TN04-2022-0034567', '2032-07-18', '2000-06-14', '18 Velachery Main Road',       'Chennai'),
-('Suresh',   'Babu',     'suresh.babu@gmail.com',     '9001234573', 'TN05-2016-0009988', '2026-08-01', '1980-12-30', '5 Anna Nagar 3rd Avenue',      'Chennai'),
-('Pooja',    'Sinha',    'pooja.sinha@gmail.com',     '9001234574', 'DL01-2020-0043210', '2030-12-05', '1995-04-22', '77 CP Colony, Block B',        'Delhi'),
-('Manoj',    'Reddy',    'manoj.reddy@gmail.com',     '9001234575', 'TG01-2018-0056789', '2028-06-15', '1988-09-17', '14 Jubilee Hills, Road No 10', 'Hyderabad'),
-('Kavitha',  'Sundaram', 'kavitha.s@gmail.com',       '9001234576', 'TN06-2019-0022334', '2029-10-10', '1992-01-08', '9 Mylapore Tank Square',       'Chennai');
+('Sakapuram',  'Prashanth',  'sakapuram.prashanth@24bps1151.vrs.com',  '9001234567', 'TN01-2024-1151001', '2029-06-10', '2005-03-12', '12 VIT Road, Block A',           'Chennai'),
+('Sipra',      'Panda',      'sipra.panda@24bps1113.vrs.com',          '9001234568', 'TN02-2024-1113002', '2029-08-15', '2005-07-22', '5 Katpadi Main Road',            'Chennai'),
+('Ishant',     'Gupta',      'ishant.gupta@24bps1059.vrs.com',         '9001234569', 'TN03-2024-1059003', '2030-03-20', '2005-01-08', '33 Vellore Fort Street',         'Vellore'),
+('Harsh',      'Chauhan',    'harsh.chauhan@24bps1105.vrs.com',        '9001234570', 'TN04-2024-1105004', '2030-11-05', '2004-11-30', '7 Anna Salai, Apt 4B',           'Chennai'),
+('Priyanshu',  'Jangid',     'priyanshu.jangid@24bps1103.vrs.com',    '9001234571', 'TN05-2024-1103005', '2029-05-18', '2005-04-17', '20 Arcot Road, Block 2',         'Chennai'),
+('Vaibhav',    'Raj',        'vaibhav.raj@24bps1108.vrs.com',          '9001234572', 'TN06-2024-1108006', '2030-07-22', '2005-06-25', '9 Poonamallee High Road',        'Chennai'),
+('Noel',       'Jaison',     'noel.jaison@24bps1004.vrs.com',          '9001234573', 'TN07-2024-1004007', '2029-12-10', '2005-09-14', '14 Guindy Industrial Estate',    'Chennai'),
+('Takshak',    'Likhar',     'takshak.likhar@24bps1056.vrs.com',       '9001234574', 'TN08-2024-1056008', '2030-04-28', '2005-02-19', '3 Tambaram Sanatorium Road',     'Chennai'),
+('Karthikha',  'Jb',         'karthikha.jb@24bps1155.vrs.com',        '9001234575', 'TN09-2024-1155009', '2029-09-30', '2005-08-03', '6 Perambur High Road',           'Chennai'),
+('Nakshathra', 'Palanivel',  'nakshathra.palanivel@24bai1442.vrs.com','9001234576', 'TN10-2024-1442010', '2030-01-15', '2004-12-27', '22 Sholinganallur IT Corridor',   'Chennai');
+
+INSERT INTO Customer (FirstName, LastName, Email, Phone, LicenseNo, LicenseExpiry, DOB, Address, City) VALUES
+('Aditya',     'Sharma',       'aditya.sharma@23bps1079.vrs.com',     '9001234580', 'TN11-2023-1079011', '2028-09-12', '2004-05-10', '44 Vellore Main Road',           'Vellore'),
+('Purushothaman','KR',         'purushothaman.kr@24bps1009.vrs.com',  '9001234581', 'TN12-2024-1009012', '2030-02-20', '2005-10-15', '18 Katpadi Junction Road',       'Vellore'),
+('Rathishaa',  'T',            'rathishaa.t@24bps1058.vrs.com',       '9001234582', 'TN13-2024-1058013', '2029-07-08', '2005-03-22', '6 Saidapet Bridge Street',       'Chennai'),
+('Reththika',  'Murugadasan',  'reththika.m@24bps1135.vrs.com',       '9001234583', 'TN14-2024-1135014', '2030-06-30', '2004-12-01', '30 Periyar Nagar Block 3',       'Chennai'),
+('Koushitha',  'Senthilkumar', 'koushitha.s@24bps1020.vrs.com',       '9001234584', 'TN15-2024-1020015', '2029-11-18', '2005-07-11', '11 Ambattur Industrial Area',    'Chennai'),
+('Aashima',    'Aashima',      'aashima@24bps1060.vrs.com',           '9001234585', 'TN16-2024-1060016', '2030-08-25', '2005-02-14', '55 Anna Nagar West',             'Chennai'),
+('Keerthivasa','Krishna',      'keerthivasa.a@24bps1107.vrs.com',     '9001234586', 'TN17-2024-1107017', '2029-04-05', '2005-09-29', '8 Chrompet Bypass Road',         'Chennai'),
+('Abhitha',    'S',            'abhitha.s@24bps1041.vrs.com',         '9001234587', 'TN18-2024-1041018', '2030-10-14', '2004-08-16', '3 Tambaram West Road',           'Chennai'),
+('Satya',      'Swain',        'satya.swain@24bps1099.vrs.com',       '9001234588', 'TN19-2024-1099019', '2029-03-28', '2005-06-05', '17 Porur Main Road',             'Chennai'),
+('Soumadip',   'Patra',        'soumadip.patra@24bps1051.vrs.com',    '9001234589', 'TN20-2024-1051020', '2030-05-22', '2004-11-20', '25 Sholinganallur Phase 2',      'Chennai'),
+('Sreenidhi',  'Sivakumar',    'sreenidhi.s@24bps1146.vrs.com',       '9001234590', 'TN21-2024-1146021', '2029-01-17', '2005-04-08', '9 Velachery Bypass',             'Chennai'),
+('Shailja',    'Mishra',       'shailja.m@24bps1072.vrs.com',         '9001234591', 'TN22-2024-1072022', '2030-12-03', '2004-07-30', '41 Guindy Anna University Road', 'Chennai'),
+('Harshitha',  'K',            'harshitha.k@24bps1003.vrs.com',       '9001234592', 'TN23-2024-1003023', '2029-10-21', '2005-01-25', '7 Adambakkam Main Road',         'Chennai'),
+('Padamati',   'Kaushik',      'padamati.k@24bps1077.vrs.com',        '9001234593', 'TN24-2024-1077024', '2030-09-09', '2004-09-13', '19 Pallavaram Radial Road',      'Chennai'),
+('Aryan',      'Nagare',       'aryan.n@24bps1070.vrs.com',           '9001234594', 'TN25-2024-1070025', '2029-08-16', '2005-05-06', '36 Perambur Barracks Road',      'Chennai'),
+('SRam',       'Krishna',      'sramkrishna@24bps1082.vrs.com',       '9001234595', 'TN26-2024-1082026', '2030-07-14', '2004-10-28', '14 Thiruvanmiyur ECR Road',      'Chennai');
 
 INSERT INTO Vehicle (Make, Model, Year, LicensePlate, Color, CategoryID, FuelType, Transmission, Seats, DailyRate, Status, BranchID, Mileage) VALUES
 ('Maruti',   'Swift',        2021, 'TN01AB1234', 'White',      1, 'Petrol',   'Manual',    5,  999.00,  'Available',          1, 25000),
