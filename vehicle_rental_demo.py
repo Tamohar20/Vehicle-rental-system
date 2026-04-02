@@ -1,16 +1,3 @@
-"""
-=============================================================
-  VEHICLE RENTAL SYSTEM - MySQL Demo
-  Team: 24BPS / 24BAI Batch
-=============================================================
-  Requirements:
-      pip install mysql-connector-python tabulate
-  
-  Usage:
-      python vehicle_rental_demo.py
-=============================================================
-"""
-
 import mysql.connector
 from mysql.connector import Error
 from tabulate import tabulate
@@ -18,9 +5,6 @@ from datetime import date, datetime
 import sys
 import os
 
-# ─────────────────────────────────────────────
-#  DATABASE CONNECTION CONFIG — edit as needed
-# ─────────────────────────────────────────────
 DB_CONFIG = {
     "host":     "localhost",
     "port":     3306,
@@ -28,10 +12,6 @@ DB_CONFIG = {
     "password": "",            # change to your MySQL password
     "database": "VehicleRentalDB",
 }
-
-# ─────────────────────────────────────────────
-#  HELPERS
-# ─────────────────────────────────────────────
 
 def connect():
     """Return a live MySQL connection or exit on failure."""
@@ -85,11 +65,6 @@ def section(label):
 def pause():
     input("\n  ▶  Press Enter to continue...")
 
-
-# ─────────────────────────────────────────────
-#  DEMO MODULES
-# ─────────────────────────────────────────────
-
 def demo_branch_overview(conn):
     section("1.  BRANCH OVERVIEW")
     sql = """
@@ -121,8 +96,7 @@ def demo_vehicle_availability(conn):
     """
     rows, cols = run_query(conn, sql)
     pretty(rows, cols, "Full Vehicle Fleet")
-
-    # availability summary by branch
+  
     sql2 = """
         SELECT BranchName, City, Available, Rented, UnderMaintenance, Total
         FROM   vw_VehicleAvailability;
@@ -175,7 +149,6 @@ def demo_active_rentals(conn):
 def demo_create_rental(conn):
     section("5.  CREATE A NEW RENTAL  (Stored Procedure Demo)")
 
-    # Show available vehicles
     sql_av = """
         SELECT v.VehicleID,
                CONCAT(v.Make,' ',v.Model) AS Vehicle,
@@ -188,7 +161,6 @@ def demo_create_rental(conn):
     rows, cols = run_query(conn, sql_av)
     pretty(rows, cols, "Available Vehicles (sample)")
 
-    # Show customers
     sql_cu = """
         SELECT CustomerID, CONCAT(FirstName,' ',LastName) AS Name
         FROM   Customer LIMIT 10;
@@ -223,7 +195,6 @@ def demo_create_rental(conn):
 def demo_complete_rental(conn):
     section("6.  COMPLETE A RENTAL  (Stored Procedure Demo)")
 
-    # Show the most recently created active rental
     sql = """
         SELECT r.RentalID,
                CONCAT(c.FirstName,' ',c.LastName) AS Customer,
@@ -438,12 +409,7 @@ def demo_overdue_check(conn):
     else:
         print("\n  ✅  No overdue rentals at this time.\n")
     pause()
-
-
-# ─────────────────────────────────────────────
-#  MAIN MENU
-# ─────────────────────────────────────────────
-
+  
 MENU = [
     ("1",  "Branch Overview",                demo_branch_overview),
     ("2",  "Vehicle Availability",           demo_vehicle_availability),
