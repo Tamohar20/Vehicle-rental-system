@@ -179,8 +179,8 @@ vehicle-rental-system/
 
 | Name | Register No. | Role |
 |------|-------------|------|
-| Swapnil Jaiswal | 24BPS1002 | Database Designer |
-| Tamohar Das | 24BPS1016 | SQL Developer |
+| Swapnil Jaiswal | 24BPS1002 | SQL Developer |
+| Tamohar Das | 24BPS1016 | Database Designer |
 | Pranav Bhatia | 24BPS1001 | Documentation Lead |
 | Harsh Gupta | 24BPS1021 | Presentation & Demo Lead |
 
